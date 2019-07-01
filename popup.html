@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:400,600,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <style>
+      html {
+        font-size: 62.5%;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: #c55;
+        font-family: 'Frank Ruhl Libre', serif;
+      }
+
+      /* width */
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.2);
+        transition: all 0.2s;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 0, 0, 0.4);
+      }
+
+      .quote-box {
+        width: 400px;
+        height: 400px;
+        margin: 0 auto;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .icon {
+        font-size: 5rem;
+        text-shadow: 0.5rem 0.5rem #fff;
+      }
+
+      .quote {
+        font-size: 5rem;
+        font-weight: 700;
+        text-shadow: 0.3rem 0.3rem #fff;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        word-wrap: break-word;
+      }
+
+      .author {
+        font-weight: 600;
+        letter-spacing: 0.2rem;
+        font-size: 3rem;
+        font-style: italic;
+        text-shadow: 0.1rem 0.2rem #fff;
+      }
+
+      .action-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+
+      .btn-new-quote {
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+        cursor: pointer;
+        border: none;
+        background-color: #000;
+        color: white;
+        padding: 1.5rem;
+        border-radius: 50%;
+        outline: none;
+        transition: all 0.3s;
+        box-shadow: 0.8rem 0.8rem #fff;
+      }
+
+      .btn-new-quote:hover {
+        transform: translateY(-3px);
+        box-shadow: 1rem 1rem #fff;
+      }
+
+      .btn-new-quote:focus {
+        transform: translateY(3px);
+        box-shadow: 0.6rem 0.6rem #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="quote-box">
+      <div id="icon" class="icon">
+        <i class="fas fa-quote-right"></i>
+      </div>
+      <div id="quote"></div>
+      <div class="action-container">
+        <button id="changeQuote" class="btn-new-quote icon-hover">
+          <i class="fas fa-redo"></i>
+        </button>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
